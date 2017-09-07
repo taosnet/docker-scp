@@ -51,6 +51,10 @@ Subsequent runs can be:
 docker run --rm -v backup-key:/root/.ssh -v ns1:/etc/pdns/db taosnet/scp -P 2222 /etc/pdns/db/zones.db backup@hostb:/home/backup/db
 ```
 
+## Utilities
+
+* **setupUser.sh**: Simple shell script to make it easier to setup multiple users. It has two usages. First to setup new users: `setupUser.sh [-g group] [-k sshKey] username`. The second use is to add a ssh key to an existing user: `setupUser.sh -k sshKey username`.
+
 ## Environmental Variables
 
 * **SSH_USER** is the username of the initial user to setup.
