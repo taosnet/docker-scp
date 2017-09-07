@@ -32,7 +32,7 @@ if getent passwd "$user" >/dev/null; then
 		exit 2
 	fi
 	group=`groups "$user" | cut -d' ' -f1`
-	if ! [ -e "/user/$user/.ssh" ]; then
+	if ! [ -e "/home/$user/.ssh" ]; then
 		mkdir "/home/$user/.ssh"
 		touch "/home/$user/.ssh/authorized_keys"
 		chown -R "$user"."$group" "/home/$user/.ssh"
